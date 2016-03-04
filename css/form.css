@@ -1,0 +1,10 @@
+body{background-image:url('background.jpg'); background-size:100%;font-family:"Beatnik SF"; color: white; font-size:20px;}
+
+div#container{
+  margin:100px;
+}
+
+div#errorMessage{
+  text-align : center;
+  padding : 200px;
+}

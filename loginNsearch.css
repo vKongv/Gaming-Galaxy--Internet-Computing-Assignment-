@@ -1,0 +1,163 @@
+body
+{
+  background-image:url('loginPage.jpg');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-attachment: fixed;
+  font-family: "Beatnik SF";
+}
+
+p
+{
+   font-family: "Beatnik SF";
+   font-size: 21px;
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a
+{
+  color : #1253A4;
+  text-decoration : none;
+}
+
+a:visited
+{
+  color : #1253A4;
+}
+
+a.big-link
+{
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+a.big-title
+{
+  font-familiy : Arial;
+  font-size: 25px;
+}
+
+a.small-link
+{
+  color : #4c4c4c;
+  font-size: 10px;
+}
+
+a.top-left{
+  position : absolute;
+  top : 15px;
+  left : 30px;
+}
+
+h2
+{
+  font-family : Arial;
+  font-size : 20pt;
+  color : white;
+}
+
+div
+{
+  margin: auto auto;
+  width : 40%
+}
+
+div#container
+{
+  margin: 150px auto;
+  padding : 40px;
+  width : 40%;
+  border-radius: 20px;
+  background-color : #000000;
+  opacity: 0.8;
+}
+
+div#search-container
+{
+  margin: 150px auto;
+  margin-bottom : 0px;
+  padding : 40px;
+  width : 80%;
+  border-radius: 20px;
+  background-color : #000000;
+  opacity: 0.8;
+}
+
+div#data-container
+{
+
+  margin : 50px auto;
+  padding : 40px;
+  background-color : #000000;
+  opacity : 0.95;
+  color : white;
+  font : 12pt "Verdana";
+
+
+}
+
+img
+{
+  border-radius : 15px;
+  border : 3px white solid;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+input
+{
+  font-family: "Beatnik SF";
+  font-size : 20px;
+  width : 250px ;
+  height : 40px;
+}
+
+input.search-box
+{
+  width : 700px ;
+}
+
+select {
+  font-size : 20px;
+  margin-left : 10px;
+  margin-right : 10px;  
+}
+
+
+.glowing-border {
+    border: 5px solid #ffffff ;
+}
+
+
+input.button
+{
+  color : white;
+  width: 90px;
+  height: 40px;
+  font-size: 16px;
+  background-color : #1253A4;
+  cursor: pointer;
+  padding : 0px;
+  margin-right: 10 px;
+  border-radius: 10px
+
+}
+
+p.helper-text
+{
+  font-family : Verdana;
+  font-size : 10pt;
+  color: white;
+}
+
+p.center
+{
+  text-align: center;
+
+}
+
+p.left
+{
+  text-align: left;
+}

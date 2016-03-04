@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us - Gaming Galaxy </title>
+  <meta charset= "utf-8">
+  <style type="text/css">
+  #nav{
+    color: #4C4C4C;
+    font-family: "Beatnik SF";
+    font-size: 21px;
+    padding: 0;
+    position:relative;
+    margin-top:20px;
+    text-align:center;
+  }
+
+  #nav ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style: none;
+  }
+
+  #nav ul li {
+    font:20px "Beatnik SF";
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    padding: 15px 20px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  #nav ul li:hover {
+    background: #666;
+    color: #fff;
+  }
+
+  #nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width:189px;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #nav ul li ul li {
+    font-size:14px;
+    text-align:center;
+    background: #555;
+    display: block;
+    color: #fff;
+  }
+
+  #nav ul li a {
+    padding:5px;
+    text-decoration:none;
+    color:#4c4c4c;}
+
+  #nav ul li a:hover { text-decoration:none;
+    color:#fff;}
+
+  #nav ul li ul li:hover { background: #999; }
+  #nav ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  #nav ul li ul li a {
+    color : #fff;
+  }
+
+  #share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+  }
+
+  div#report
+  {
+    font-family: "Beatnik SF";
+    color:#4c4c4c;
+    margin:100px 300px;
+    margin-bottom:50px;
+  }
+  div#container
+  {
+    font-family: "Beatnik SF";
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  table
+  {
+    border: 3px solid;
+    border-color:#4c4c4c;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #888888;
+  }
+
+  table tr td
+  {
+    text-align:top-left;
+    padding: 20px;
+    font-size:20px;
+  }
+  input
+  {
+    font-size:16px;
+    padding:5px;
+    font: "Beatnik SF";
+  }
+  </style>
+</head>
+<body>
+  <div id="nav">
+
+    <ul>
+      <li><a target="" href="mainPage.php">Home</a></li> | &nbsp;
+      <li><a target="" href="showAllNews.php">News</a></li> | &nbsp;
+      <li>
+        <a target="" href="gametype.php">Game Types</a>
+        <ul style="width:183px;">
+          <li><a href="genre.php?genre=Action">Actions</a></li>
+          <li><a href="genre.php?genre=Racing">Racing</a></li>
+          <li><a href="genre.php?genre=Shooting">Shooting</a></li>
+          <li><a href="genre.php?genre=Sports">Sports</a></li>
+          <li><a href="genre.php?genre=Strategey">Strategy</a></li>
+          <li><a href="genre.php?genre=Survival">Survival</a></li>
+        </ul>
+      </li> | &nbsp;
+      <li><a target="" href="showAllReview.php">Reviews</a></li> | &nbsp;
+      <li style="border:solid;border-color:#999; border-radius:5px;"><a target="" href="contactus.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <form id = "formReport" action="contactus.php" method="post" onsubmit = "return validateInput()">
+    <div id="report">
+      <table>
+        <tr>
+          <td>Name :</td><td><input type="text" name="name" id="name" maxlength=70 size=72> (Required)</td>
+        </tr>
+        <tr>
+          <td>Email :</td><td><input type="text" name= "email" id="email" maxlength=70 size=72> (Required)</td>
+        </tr>
+        <tr>
+          <td valign="top">Problem:</td>
+          <td><input type="radio" name="problem" id="issue" value="Bug" checked>Bug &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="problem" id="issue" value="Broken Link">Broken Link <br>
+            <input type="radio" name="problem" id="issue" value="Others">Others / Details :<br>
+            <textarea name="problemDetail" id="issue" rows="10" cols="80" placeholder="Tell us more about your problem and which post you had found the problem "></textarea></td>
+        </tr>
+      </table>
+    </div>
+    <div id=container>
+      <input id = "submit" name = "submit" type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </div>
+  </form>
+
+  <p style="font-family:Beatnik SF;background-color:#4c4c4c; color:#fff;padding:10px;">&copy; 2015 Gaming Galaxy. All right reserved. Privacy notice.</p>
+
+  <script type ="text/javascript">
+  function validateInput() {
+    var name = document.forms["formReport"]["name"].value;
+    var email = document.forms["formReport"]["email"].value;
+    if (name == null || name == ""){
+      alert("Name is required.");
+      return false;
+    }
+    if (email == null || email == ""){
+      alert("Email is required.");
+      return false;
+    }
+    var atpos = email.indexOf("@");
+    var dotpos = email.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+          alert("Invalid email format.")
+          return false;
+    }
+    return true;
+  }
+  </script>
+</body>
+</html>

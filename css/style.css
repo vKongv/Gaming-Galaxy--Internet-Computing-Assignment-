@@ -1,0 +1,339 @@
+
+/* ------------- General ------------- */
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,latin-ext,cyrillic,greek-ext,greek,vietnamese);
+*/
+@font-face {
+	font-family: "basiccontrols";
+	src: url("basiccontrols.eot");
+	src: url("basiccontrols.eot#iefix") format("embedded-opentype"),
+			url("basiccontrols.woff") format("woff"),
+			url("basiccontrols.ttf") format("truetype"),
+			url("basiccontrols.svg#basic") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.slider {
+	border: 10px solid;
+	border-color:#4c4c4c;
+	border-radius: 15px;
+  display: inline-block;
+  position: relative;
+  max-width: 1020px;
+  width: 100%;
+  margin-top: 550px;
+}
+.slider > .cs_anchor {
+  display: none;
+}
+.slider > ul {
+  position: relative;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
+
+  overflow: hidden;
+/*  white-space: nowrap;*/
+}
+.slider > ul > div {
+  width: 100%;
+  visibility: hidden;
+  font-size: 0px;
+  line-height: 0;
+}
+.slider > ul > li.img img {
+  width: 100%;
+}
+.slider > ul > li.img {
+  font-size: 0pt;
+}
+.slider > ul > li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* ------------- /General Styles ------------- */
+
+/* ------------- General Arrows ------------- */
+.slider > .cs_arrowprev,
+.slider > .cs_arrownext {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+}
+.slider > .cs_arrowprev > label,
+.slider > .cs_arrownext > label {
+  position: absolute;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+}
+.slider > .cs_arrowprev {
+  left: 0;
+}
+.slider > .cs_arrownext {
+  right: 0;
+}
+
+.slider > .slide:checked ~ .cs_arrowprev > label,
+.slider > .slide:checked ~ .cs_arrownext > label {
+  opacity: 0;
+  z-index: -1;
+}
+
+
+
+.slider > #cs_slide1_0:checked ~ .cs_arrowprev > label.num3,
+.slider > #cs_pause1_0:checked ~ .cs_arrowprev > label.num3,
+.slider > #cs_slide1_0:checked ~ .cs_arrownext > label.num1,
+.slider > #cs_pause1_0:checked ~ .cs_arrownext > label.num1,
+.slider > #cs_slide1_1:checked ~ .cs_arrowprev > label.num0,
+.slider > #cs_pause1_1:checked ~ .cs_arrowprev > label.num0,
+.slider > #cs_slide1_1:checked ~ .cs_arrownext > label.num2,
+.slider > #cs_pause1_1:checked ~ .cs_arrownext > label.num2,
+.slider > #cs_slide1_2:checked ~ .cs_arrowprev > label.num1,
+.slider > #cs_pause1_2:checked ~ .cs_arrowprev > label.num1,
+.slider > #cs_slide1_2:checked ~ .cs_arrownext > label.num3,
+.slider > #cs_pause1_2:checked ~ .cs_arrownext > label.num3,
+.slider > #cs_slide1_3:checked ~ .cs_arrowprev > label.num2,
+.slider > #cs_pause1_3:checked ~ .cs_arrowprev > label.num2,
+.slider > #cs_slide1_3:checked ~ .cs_arrownext > label.num0,
+.slider > #cs_pause1_3:checked ~ .cs_arrownext > label.num0 {
+  opacity: 1;
+  z-index: 5;
+}
+
+/* ------------- /General Arrows ------------- */
+
+/* ------------- General Bullets ------------- */
+.slider > .cs_bullets {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  font-size: 0;
+  line-height: 8pt;
+  text-align: center;
+}
+.slider > .cs_bullets > div {
+  margin-left: -50%;
+  width: 100%;
+}
+.slider > .cs_bullets > label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* ------------- /General Bullets ------------- */
+
+/* ------------- Effect ------------- */
+.slider > ul > li.num0 {
+  left: 0%;
+}
+.slider > ul > li.num1 {
+  left: 100%;
+}
+.slider > ul > li.num2 {
+  left: 200%;
+}
+.slider > ul > li.num3 {
+  left: 300%;
+}
+
+
+
+.slider > #cs_slide1_0:checked ~ ul > li,
+.slider > #cs_pause1_0:checked ~ ul > li {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.slider > #cs_slide1_1:checked ~ ul > li,
+.slider > #cs_pause1_1:checked ~ ul > li {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.slider > #cs_slide1_2:checked ~ ul > li,
+.slider > #cs_pause1_2:checked ~ ul > li {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+.slider > #cs_slide1_3:checked ~ ul > li,
+.slider > #cs_pause1_3:checked ~ ul > li {
+  -webkit-transform: translateX(-300%);
+  transform: translateX(-300%);
+}
+
+
+
+.slider > ul > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  opacity: 1;
+
+  -webkit-transition: -webkit-transform 2000ms;
+  transition: -webkit-transform 2000ms, transform 2000ms;
+}
+
+
+
+@-webkit-keyframes slide {
+  0%, 12.5%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  25%, 37.5%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  50%, 62.5%  { -webkit-transform: translateX(-200%); transform: translateX(-200%); }
+  75%, 87.5%  { -webkit-transform: translateX(-300%); transform: translateX(-300%); }
+
+}
+@keyframes slide {
+  0%, 12.5%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  25%, 37.5%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  50%, 62.5%  { -webkit-transform: translateX(-200%); transform: translateX(-200%); }
+  75%, 87.5%  { -webkit-transform: translateX(-300%); transform: translateX(-300%); }
+
+}
+
+.slider  > #cs_play1:checked ~ ul > li {
+  -webkit-animation: slide 16000ms infinite;
+  animation: slide 16000ms infinite;
+}
+
+
+.slider > #cs_play1:checked ~ ul > li,
+.slider > .pause:checked ~ ul > li {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+/* ------------- /Effect ------------- */
+
+/* ------------- Template Show on hover ------------- */
+.slider > .cs_play_pause {
+  -webkit-transition: .4s all 0s ease;
+  transition: .4s all 0s ease;
+}
+.slider > .cs_arrowprev {
+  -webkit-transition: .4s all .15s ease;
+  transition: .4s all .15s ease;
+}
+.slider > .cs_arrownext {
+  -webkit-transition: .4s all .3s ease;
+  transition: .4s all .3s ease;
+}
+.slider > .cs_arrowprev,
+.slider > .cs_arrownext,
+.slider > .cs_play_pause {
+  opacity: 0;
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.slider:hover > .cs_arrowprev,
+.slider:hover > .cs_arrownext,
+.slider:hover > .cs_play_pause {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/* ------------- Template Show on hover ------------- */
+
+/* ------------- Template Arrows ------------- */
+.slider > .cs_arrowprev > label,
+.slider > .cs_arrownext > label {
+  padding: 17px;
+  height: 23px;
+  width: 23px;
+  margin-top: -28px;
+  margin-left: -28px;
+
+  background-color: #ffffff;
+
+  border-radius: 50%;
+}
+.slider > .cs_arrowprev > label,
+.slider > .cs_arrownext > label,
+.slider > .cs_arrowprev > label span:after,
+.slider > .cs_arrownext > label span:after {
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+.slider > .cs_arrowprev {
+  margin-left: 2px;
+  left: 45px;
+}
+.slider > .cs_arrownext {
+  margin-right: 2px;
+  right: 45px;
+}
+.slider > .cs_arrowprev > label span,
+.slider > .cs_arrownext > label span {
+  display: block;
+  color: #4c4c4c;
+}
+.slider > .cs_arrowprev > label span:after,
+.slider > .cs_arrownext > label span:after {
+  display: block;
+  font: 21px "basiccontrols";
+  line-height: 23px;
+  text-align: center;
+}
+
+
+.slider > .cs_arrowprev > label span:after {
+  content: '\e801';
+}
+.slider > .cs_arrownext > label span:after {
+  content: '\e800';
+}
+
+.slider > .cs_arrowprev:hover > label,
+.slider > .cs_arrownext:hover > label {
+  background-color: #ffffff;
+}
+
+/* ------------- /Template Arrows ------------- */
+
+/* ------------- Template Bullets ------------- */
+.slider > .cs_bullets {
+  bottom: 5px;
+  margin-bottom: 5px;
+}
+.slider > .cs_bullets > label {
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 9px;
+  background: #ffffff;
+}
+
+
+.slider > .cs_bullets > label > .cs_point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.slider > .cs_bullets > label:hover > .cs_point,
+
+.slider > #cs_slide1_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.slider > #cs_pause1_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.slider > #cs_slide1_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.slider > #cs_pause1_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.slider > #cs_slide1_2:checked ~ .cs_bullets > label.num2 > .cs_point,
+.slider > #cs_pause1_2:checked ~ .cs_bullets > label.num2 > .cs_point,
+.slider > #cs_slide1_3:checked ~ .cs_bullets > label.num3 > .cs_point,
+.slider > #cs_pause1_3:checked ~ .cs_bullets > label.num3 > .cs_point {
+  background: #4c4c4c;
+}

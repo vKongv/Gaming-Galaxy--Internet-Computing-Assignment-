@@ -1,0 +1,287 @@
+<html>
+<head>
+<style type="text/css">
+body{
+  font-family:"Beatnik SF";
+}
+#nav{
+  color: #4C4C4C;
+  font-family: "Beatnik SF";
+  font-size: 21px;
+  padding: 0;
+  position:relative;
+  margin-top:20px;
+  text-align:center;
+}
+
+#nav ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+}
+
+#nav ul li {
+  font:20px "Beatnik SF";
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#nav ul li:hover {
+  background: #666;
+  color: #fff;
+}
+
+#nav ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width:189px;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#nav ul li ul li {
+  font-size:14px;
+  text-align:center;
+  background: #555;
+  display: block;
+  color: #fff;
+}
+
+#nav ul li a {
+  padding:5px;
+  text-decoration:none;
+  color:#4c4c4c;
+}
+
+#nav ul li a:hover { text-decoration:none;
+    color:#fff;}
+
+#nav ul li ul li:hover { background: #999; }
+#nav ul li:hover ul {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+}
+
+#nav ul li ul li a{text-decoration:none; color:#fff;}
+
+div#gamedetail{
+  margin-left: 130px;
+}
+div#gamedetail table tr td img{
+  border:double 25px;
+  border-color:#444;
+  border-radius:10px;
+}
+
+div#gamedetail table tr td a{
+  font-family:"Beatnik SF";
+  font-size:30px;
+  color:#4c4c4c;
+  text-decoration:none;
+}
+
+div#gamedetail table tr td a:visited,
+div#gamedetail table tr td a:active,{
+  color:#4c4c4c;
+  text-decoration:none;}
+div#gamedetail table tr td a:hover{
+  color:orange;
+  text-decoration:none;
+}
+
+div#gamedetail table tr td {
+  font-family:"Beatnik SF";
+  font-size:20px;
+  color:#4c4c4c;
+  padding:10px;
+}
+
+div#gamedescription{
+  font-size:16px;
+  margin-top:10px;
+  margin-left:60px;
+  margin-right:60px;
+  width:1270px;
+  padding:10px;
+  text-align:justify;
+  font-family:"verdana";
+  border:solid 4px #4c4c4c;
+  border-radius:15px;
+}
+div#gamephoto span {margin-left:17px;}
+div#gamephoto span a img{
+  display: inline;
+  text-align:center;
+  height:138;
+  width:238;
+  margin: 5px;
+  margin-right:10px;
+  border: 3px solid #ddd;
+  border-radius:15px;
+}
+
+div#gamephoto span a,div#gamephoto span a:hover, div#gamephoto span a:active,
+div#gamephoto span a:visited{text-decoration:none;}
+
+div#gamedescription ul li{
+  padding:15px;
+  padding-bottom:5px;
+}
+
+</style>
+</head>
+<body>
+  <div id="nav">
+    <ul>
+      <li><a target="" href="home3.html">Home</a></li> | &nbsp;
+      <li><a target="" href="news.html">News</a></li> | &nbsp;
+      <li>
+        <a target="" href="gametype.html">Game Types</a>
+        <ul style="width:183px;">
+          <li><a target="" href="genre.html">Actions</a></li>
+          <li><a target="" href="genre.html">Racing</a></li>
+          <li><a target="" href="genre.html">Shooter</a></li>
+          <li><a target="" href="genre.html">Sports</a></li>
+          <li><a target="" href="genre.html">Strategy</a></li>
+          <li><a target="" href="genre.html">Simulation</a></li>
+        </ul>
+      </li> | &nbsp;
+      <li><a target="" href="review.html">Reviews</a></li> | &nbsp;
+      <li><a target="" href="contactus.html">Contact Us</a></li>
+    </ul>
+  </div>
+<br><br>
+  <div id="gamedetail">
+    <table>
+      <tr >
+        <td valign='bottom' rowspan = '9' style='padding-right:20px;'><img width=580px height=300px src ='thecrew.jpg'></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td valign='top'><a target ="_blank" href='mainPage.php'>THE CREW</a></td>
+      </tr>
+
+      <tr>
+        <td valign='top'><strong>Genre:</strong> </td>
+        <td valign='top'>Racing</td>
+      </tr>
+      <tr>
+        <td valign='top' rowspan='3'><strong>Rating:</strong></td>
+      </tr>
+      <tr>
+        <td valign='top'>Admin rates:</td>
+        <td>7.0 / 10.0</td>
+      </tr>
+      <tr>
+        <td valign='top'>User rates:</td>
+        <td valign='top'>7.5 / 10.0</td>
+      </tr>
+      <tr>
+        <td valign='top'><strong>Released Date:</strong> </td>
+        <td valign='top'>2 December, 2014</td>
+      </tr>
+      <tr>
+        <td valign='top'><strong>Publisher:</strong> </td>
+        <td valign='top'>Ubisoft</td>
+      </tr>
+      <tr>
+        <td valign='top'><strong>Platforms:</strong> </td>
+        <td valign='top'>PCs, PS, XBOX</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="gamephoto">
+    <span>
+      <a target="" href="">
+        <img src="tc1.jpg" alt="tc" >
+      </a>
+    </span>
+    <span>
+      <a target="" href="">
+        <img src="tc2.jpg" alt="tc">
+      </a>
+    </span>
+    <span>
+      <a target="" href="">
+        <img src="tc3.jpg" alt="tc">
+      </a>
+    </span>
+    <span>
+      <a target="" href="">
+        <img src="tc4.jpg" alt="tc">
+      </a>
+    </span>
+    <span>
+      <a target="" href="">
+        <img src="tc5.jpg" alt="tc">
+      </a>
+    </span>
+  </div>
+
+  <p  style="margin-left:350px;"><embed width="720" height="348" src="http://www.youtube.com/v/LVDUbfdfBPk" frameborder="0" allowfullscreen></p>
+
+    <div id="sharebuttons">
+        <!-- Facebook -->
+      <a href="http://www.facebook.com/sharer.php?u=http://youtu.be/LVDUbfdfBPk" target="_blank">
+        <img style="margin-left:600px;"src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" width="3%" height="6%"/></a>
+
+          <!-- Twitter -->
+      <a href="http://twitter.com/share?url=http://youtu.be/LVDUbfdfBPk" target="_blank">
+        <img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" width="3%" height="6%"/></a>
+
+            <!-- Google+ -->
+      <a href="https://plus.google.com/share?url=http://youtu.be/LVDUbfdfBPk" target="_blank">
+        <img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" width="3%" height="6%"/></a>
+
+              <!-- LinkedIn -->
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://youtu.be/LVDUbfdfBPk" target="_blank">
+          <img src="http://www.simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" width="3%" height="6%"/></a>
+    </div>
+
+    <div id="gamedescription">
+        <strong style="font-family:Beatnik SF; font-size:25px;">About this game</strong><br><br>
+                Your car is your avatar &ndash; fine tune your ride as you level up and progress through 5 unique and richly detailed regions of a massive open&ndash;world US.
+                Maneuver through the bustling streets of New York City and Los Angeles,
+                cruise down sunny Miami Beach or trek through the breathtaking plateaus of Monument Valley.
+                Each locale comes with its own set of surprises and driving challenges to master.
+                On your journey you will encounter other players on the road &ndash; all potentially worthy companions to crew up with,
+                or future rivals to compete against. This is driving at its most exciting, varied and open.
+                <ul>
+                  <li><b><em>NEVER DRIVE ALONE</em></b></li>
+                  Jump in and out seamlessly and build your crew of four through bonding or intense rivalry.
+                  Whether your objective is to take down a convoy or to escape the police,
+                  achieving it with friends ensures a fresh experience each time you join in.
+
+                  <li><b><em>A PLAYGROUND OF UNPRECEDENTED SCOPE AND VARIETY</em></b></li>
+                  The entire United States is your driving playground &ndash; all roads and everything in between.
+                  Every type of terrain imaginable is yours to master &ndash; from downtown city streets to suburbs,
+                  hillsides, cornfields, canyons, desert dunes or even race tracks.
+
+                  <li><b><em>PREPARE YOUR CAR FOR THE NEXT CHALLENGE</em></b></li>
+                  Collect body and performance parts as you progress to customize and upgrade your licensed cars.
+                  Equip your ride with 5 different tuning specs (street, perf, dirt, raid, circuit) to adapt to different driving terrains.
+                  Choose from a wide range of perks to enhance your vehicle according to your driving style.
+                  <br>
+
+                  <li><b><em>THE EXPERIENCE GOES ON, WHEREVER YOU ARE</em></b></li>
+                  Continue the experience on iOS, Android tablets, and on the web.
+                  Track of your friends&#39; performance and fine tune your ride before taking it live to set new records,
+                  or send your crew on jobs while on&ndash;the&ndash;go to earn more XP and parts.
+                </ul>
+      </div>
+  </body>
+</html>

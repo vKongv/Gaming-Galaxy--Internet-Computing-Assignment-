@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset= "utf-8" content="text/html">
+<title>Login or Sign Up - Gaming Galaxy</title>
+<link rel="stylesheet" type="text/css" href="loginNsearch.css">
+</head>
+
+<body>
+
+<a class = "big-link top-left" href = "mainPage.php">Home</a>
+
+<div id = "container">
+  <form id = "loginDetail" action="login.php" onsubmit = "return validateLoginInfo()" method="post">
+    <p class="center helper-text"> <input class = "glowing-border" id = "userName" name="userName" placeholder="Username" type="text" maxlength="20"> </p>
+    <p class="center helper-text"> <input class = "glowing-border" id = "userPassword" name="userPassword" placeholder="Password" type="password" maxlength="10"> </p>
+    <p class="center helper-text"> <input class = "button" id="login" type="submit" value="Login"> </p>
+    <p class="center helper-text"> Not a member? Click <a href ="#" onClick = "signUpPages()"> here </a> </p>
+    <p class="left helper-text" id = "warningMessage" style = "color: red; font-size: 10pt;"></p>
+</form>
+</div>
+
+<script>
+
+  function backToHome(){
+    window.location = "mainPage.php";
+  }
+
+  function validateLoginInfo(){
+    var userNames = document.forms["loginDetail"]["userName"].value;
+    var validateData = 0;
+    var userPasswords = document.forms["loginDetail"]["userPassword"].value;
+    if (userNames ==null || userNames =="") {
+      document.getElementById("userName").style.borderColor = "red";
+      document.getElementById("warningMessage").innerHTML = "Red color indicate required field";
+      validateData++;
+
+    }
+    if (userPasswords ==null || userPasswords ==""){
+      document.getElementById("userPassword").style.borderColor = "red";
+      document.getElementById("warningMessage").innerHTML = "Red color indicate required field";
+      validateData++;
+    }
+    if (validateData > 0)
+      return false;
+    else
+      return true;
+  }
+
+  function validateSignUpInfo(){
+
+    var userNames = document.forms["loginDetail"]["userNameS"].value;
+    var userPasswords = document.forms["loginDetail"]["userPasswordS"].value;
+    var userRetypePasswords = document.forms["loginDetail"]["userPasswordRetypeS"].value;
+    var userEmails = document.forms["loginDetail"]["emailAddressS"].value;
+    var wrongInput = false;
+
+    //check user name
+    if(userNames == null || userNames == ""){
+      document.getElementById("nameP").innerHTML = " <input class = 'glowing-border' name='userNameS' placeholder='Username' type='text' maxlength='20'> User name is required!";
+      document.getElementById("nameP").style.color = "red";
+      wrongInput = true;
+    }
+    else{
+      //document.getElementById("nameP").innerHTML = " <input class = 'glowing-border' name='userNameS' placeholder='Username' type='text' maxlength='20'> Max 20 characters ";
+    }
+
+    //check user password
+    if(userPasswords == null || userPasswords == ""){
+      document.getElementById("passwordP").innerHTML = " <input class = 'glowing-border' name='userPasswordS' placeholder='Password' type='password' maxlength='10'> Password is required! ";
+      document.getElementById("passwordP").style.color = "red";
+      wrongInput = true;
+    }
+    else if (userPasswords.length < 6){
+      document.getElementById("passwordP").innerHTML = " <input class = 'glowing-border' name='userPasswordS' placeholder='Password' type='password' maxlength='10'> Minimum 6 characters! ";
+      document.getElementById("passwordP").style.color = "red";
+      wrongInput = true;
+    }
+    else{
+      //document.getElementById("passwordP").innerHTML = " <input class = 'glowing-border' name='userPasswordS' placeholder='Password' type='password' maxlength='10'> 6-10 charaters; Case-sensitive ";
+      //document.getElementById("passwordP").style.color = "white";
+    }
+
+    //check user password with retype password
+    if(userPasswords != userRetypePasswords ){
+      document.getElementById("passwordRetypeP").innerHTML = " <input class = 'glowing-border' name='userPasswordRetypeS' placeholder='Retype Password again' type='password' maxlength='10'> Password is not same! ";
+      document.getElementById("passwordRetypeP").style.color = "red";
+      wrongInput = true;
+    }
+    else{
+      //document.getElementById("passwordRetypeP").innerHTML = " <input class = 'glowing-border' name='userPasswordRetypeS' placeholder='Retype Password again' type='password' maxlength='10'> ";
+    }
+
+    //Verify email address
+    var atpos = userEmails.indexOf("@");
+    var dotpos = userEmails.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmails.length) {
+          document.getElementById("emailP").style.color = "red";
+          document.getElementById("emailP").innerHTML = "<input class = 'glowing-border' name='emailAddressS' placeholder='Email Address' type='text'> Invalid email address";
+          wrongInput = true;
+    }
+    else{
+      //document.getElementById("emailP").style.color = "white";
+      //document.getElementById("emailP").innerHTML = "<input class = 'glowing-border' name='emailAddressS' placeholder='Email Address' type='text'>";
+    }
+
+
+    if(wrongInput){
+      document.getElementById("loginDetail").reset();
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
+  function signUpPages(){
+  var signUpPage ;
+  signUpPage = "<h2> Sign up your account here: </h2>" +
+              "<p id = 'nameP' class='left helper-text'> <input class = 'glowing-border' name='userNameS' placeholder='Username' type='text' maxlength='20'> Max 20 characters </p>" +
+              "<p id = 'passwordP' class='left helper-text'> <input class = 'glowing-border' name='userPasswordS' placeholder='Password' type='password' maxlength='10'> 6-10 characters; Case-sensitive </p>" +
+              "<p id = 'passwordRetypeP' class='left helper-text'> <input class = 'glowing-border' name='userPasswordRetypeS' placeholder='Retype Password again' type='password' maxlength='10'> </p>  " +
+              "<p id = 'emailP' class='left helper-text' > <input class = 'glowing-border' name='emailAddressS' placeholder='Email Address' type='text'> </p> " +
+              "<p class='left helper-text'> <input class = 'button' id='back' type='button' value='Back' onClick='window.location.reload()'> " +
+                                 "<input class = 'button' id='signUp' type='submit' value='Sign Up'>" ;
+  var formLogin = document.getElementById("loginDetail");
+  formLogin.innerHTML = signUpPage;
+  formLogin.action = "signUp.php";
+  formLogin.onsubmit = function() {return validateSignUpInfo()};
+}
+</script>
+
+
+</body>
+</html>

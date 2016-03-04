@@ -1,0 +1,165 @@
+body{
+  font-family:"Beatnik SF";
+}
+#nav{
+  color: #4C4C4C;
+  font-family: "Beatnik SF";
+  font-size: 21px;
+  padding: 0;
+  position:relative;
+  margin-top:20px;
+  text-align:center;
+}
+
+#nav ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+}
+
+#nav ul li {
+  font:20px "Beatnik SF";
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#nav ul li:hover {
+  background: #666;
+  color: #fff;
+}
+
+#nav ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width:189px;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#nav ul li ul li {
+  font-size:14px;
+  text-align:center;
+  background: #555;
+  display: block;
+  color: #fff;
+}
+
+#nav ul li a {
+  padding:5px;
+  text-decoration:none;
+  color:#4c4c4c;}
+
+  #nav ul li a:hover { text-decoration:none;
+    color:#fff;}
+
+    #nav ul li ul li:hover { background: #999; }
+    #nav ul li:hover ul {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #nav ul li ul li a {
+      color : #fff;
+    }
+
+div#newsDetail{
+  margin-left: 130px;
+}
+
+div#newsDetail table tr td a.news-Title{
+  font-family:"Beatnik SF";
+  font-size:50px;
+  color:#1253A4;
+  text-decoration:none;
+  cursor : default;
+}
+
+div#newsDetail table tr td a.news-title:visited,
+div#newsDetail table tr td a.news-title:active,{
+  color:#4c4c4c;
+  text-decoration:none;}
+
+div#newsDetail table tr td a.news-title:hover{
+  color:orange;
+  text-decoration:none;
+}
+
+div#newsDetail table tr td {
+  font-family:"Beatnik SF";
+  font-size:20px;
+  color:#4c4c4c;
+  padding:10px;
+}
+
+div#newsDetail img{
+  margin-left: -130px;
+  border:double 25px;
+  border-color:#444;
+  border-radius:10px;
+}
+
+
+div#newsText{
+  font-size:16px;
+  margin-top:10px;
+  margin-left:60px;
+  margin-right:60px;
+  margin-bottom : 30px;
+  width:90%;
+  padding: 10px;
+  text-align:justify;
+  font-family:"verdana";
+  border:solid 4px #4c4c4c;
+  border-radius:15px;
+}
+
+
+div#newsImages{
+  width:95%;
+  margin:50px auto;
+}
+div#newsImages span {margin-left:17px;}
+
+div#newsImages span a img{
+  display: inline;
+  text-align:center;
+  height:138px;
+  width:218px;
+  margin: 5px;
+  margin-right:10px;
+  border: 3px solid #ddd;
+  border-radius:15px;
+}
+
+div#newsImages span a,div#newsImages span a:hover, div#newsImages span a:active,
+div#newsImages span a:visited{text-decoration:none; cursor : default;}
+
+div#newsText{
+  padding:15px;
+  padding-bottom:5px;
+  font-family : Calibri;
+  font-size : 24px;
+}
+
+div#newsText ul li{
+  padding:15px;
+  padding-bottom:5px;
+}
+
+div#newsText h2 {
+  font-family : Beatnik SF;
+  font-size : 40px;
+  text-decoration : none;
+}
